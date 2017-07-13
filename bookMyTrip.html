@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book My Trip</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="bookMyTrip.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script  type="text/javascript" src="bookMyTrip.js"></script>
+	<link rel="stylesheet" type="text/javascript" href="bookMyTrip.js">
+	<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+	<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+</head>
+<body>
+	<div class="container">
+		<nav>
+		    <a class="homeLogo" href="bookMyTrip.html"></a>
+			<h2>EasyTravel</h2>
+			<h4>You decide, we provide...</h4>
+		</nav>
+		<div class="wrapper">
+			<div class="type">
+				<button id="onewayBtn">One Way</button>
+				<button id="roundBtn">Round Trip</button>
+			</div>
+			<form class="form" id="form1">
+				<div>
+					<fieldset>
+						<input type="text" id="from" placeholder="Select Origin" list="source"  autocomplete="off">
+						<datalist id="source">
+							<option>Select Origin</option>
+						</datalist>
+						<span id="sourceAlert" class="spanAlert"></span>
+					</fieldset>
+					<fieldset>
+						<label for="depart">Depart</label>
+						<input type="text" name="depart" id="depart" placeholder="Select Date"  autocomplete="off" readonly="">
+						<span id="departAlert" class="spanAlert"></span>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<input type="text" id="to" placeholder="Select Destination" list="destination" autocomplete="off">
+						<datalist id="destination">
+							<option>Select Destination</option>
+						</datalist>
+						<span id="destAlert" class="spanAlert"></span>
+					</fieldset>
+					<fieldset>
+						<label for="return">Return</label>
+						<input type="text" name="return" id="return" placeholder="Select Date" autocomplete="off"  readonly="">
+						<span id="returnAlert" class="spanAlert"></span>
+					</fieldset>
+					<fieldset>
+						<input type="Submit" name="submit" class="submit" value="Submit">
+						<span id="submitSpan" class="spanAlert"></span>
+					</fieldset>
+				</div>
+			</form>
+		</div>
+		<div id="result">
+			<h1 class='headerOfResultTable'>No flight is booked</h1>
+			<table id="tableDepart" class="tableBook">
+				<thead>
+					<tr>
+						<th>From</th>
+						<th>To</th>
+						<th>Time</th>
+						<th>Book</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			<table id="tableReturn" class="tableBook">
+				<thead>
+					<tr>
+						<th>From</th>
+						<th>To</th>
+						<th>Time</th>
+						<th>Book</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			<button id="tableBookSubmitButton" class="tableBookSubmitButton">Submit</button>
+		</div>
+
+
+		<div class="userDiv">
+	   		<h1 class="headerOfUserDiv">Enter your details</h1>
+	   		<div class="flightsBookedDiv">
+	   			<ul class="flightsBooked">  </ul>
+	      	</div>
+	      
+		    <form id="contact" class="userInfoForm" method="post">
+		       <fieldset>
+		        	<input placeholder="Your name" id="nm" type="text" autocomplete="off" autofocus>
+		        	<span id="nameSpan" class="spanAlert"></span>
+		       </fieldset>
+		       <fieldset>
+		        	<input placeholder="Your Email Address" autocomplete="off" type="email" id="em">
+		        	<span id="mailSpan" class="spanAlert"></span>
+		       </fieldset>
+		       <fieldset>
+		        	<input placeholder="Your Phone Number" type="text" autocomplete="off" id="no">
+		        	<span id="noSpan" class="spanAlert"></span>
+		       </fieldset>
+		       <fieldset>
+		       		<div class="genderField">
+		       			<label for="genderM">Male</label>
+		        		<input type="radio" class="gender" value="male" name="gen" id="genderM" checked="checked">
+		       
+		       			<label for="genderF">Female</label>
+			        	<input type="radio" class="gender" value="female" id="genderF" name="gen">
+		       		</div>
+		       </fieldset>
+		       <fieldset>
+		      	    <input type="Submit" name="submit" class="submit userSubmit" value="Submit">
+		        	<span id="userSubmitSpan" class="spanAlert"></span>
+		       </fieldset>     
+		    </form>
+		</div>
+		<div class="bookingDetailsDiv">
+			<table class="bookingDetailsTable">
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

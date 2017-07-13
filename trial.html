@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form>
+	    <fieldset id="autoHeight">
+	        <legend>pod</legend>
+	        <h2>Cars</h2>
+	        <select name="drop_down" id="dropDownCars">
+	            <option value="None" selected="Selected">Select type</option>
+	        </select>
+	    </fieldset>
+	</form>
+	<div id="showBmw" class="hidden">
+	    <a href="http://cdn.iphoneincanada.ca/wp-content/uploads/2012/08/white-bmw.jpg"></a>
+	</div>
+
+ 	<script type="text/javascript">
+ 		$(document).ready(function() {
+		    $.getJSON("../cars.json", function(obj) {
+		        $.each(obj.cars, function(key, value) {
+		            $("#dropDownCars").append("<option>" + value.carsName + "</option>");
+		        });
+		    });
+		});
+ 	</script>
+</body>
+</html>
